@@ -1,0 +1,18 @@
+@import '../../index.css';
+
+.list {
+    margin-top: 50px;
+    width     : 100%;
+    min-height: calc(100vh - (var(--margin-top) + var(--margin-another) * 5 - 9px));
+}
+
+.list__text {
+    width          : 100%;
+    height         : 22px;
+    display        : flex;
+    align-items    : center;
+    justify-content: flex-start;
+    font-size      : 18px;
+    font-weight    : 600;
+    line-height    : 120%;
+}

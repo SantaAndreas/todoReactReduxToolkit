@@ -1,0 +1,114 @@
+/* button  default*/
+
+.button {
+    width           : 137px;
+    height          : 40px;
+    display         : inline-flex;
+    justify-content : center;
+    align-items     : center;
+    color           : var(--button-field-text-color);
+    background-color: var(--button-field-bg-color);
+    outline         : none;
+    border          : none;
+    border-radius   : var(--border-radius-md);
+    transition      : all 0.2s;
+}
+
+.button:hover {
+    cursor          : pointer;
+    color           : var(--button-field-bg-color);
+    background-color: var(--delete-color);
+}
+
+.button:active {
+    color           : var(--button-field-bg-color);
+    background-color: var(--button-field-text-color);
+}
+
+.button:disabled,
+.button:disabled:hover {
+    cursor          : not-allowed;
+    color           : var(--text-primary-color) !important;
+    background-color: var(--text-main-color) !important;
+}
+
+/*button regular  */
+
+.button_regular {
+    color           : var(--button-field-bg-color);
+    background-color: var(--main-color);
+}
+
+.button_regular:hover {
+    color           : var(--button-field-text-color);
+    background-color: var(--button-field-bg-color);
+}
+
+.button_regular:active {
+    color           : var(--button-field-bg-color);
+    background-color: var(--button-field-text-color);
+}
+
+/* button small */
+
+.button_small {
+    width        : 86px;
+    height       : 27px;
+    color        : var(--text-main-color);
+    border-radius: var(--border-radius-sm);
+}
+
+.button_small:hover {
+    cursor          : pointer;
+    color           : var(--button-field-bg-color);
+    background-color: var(--main-color);
+}
+
+.button_small:active {
+    color           : var(--button-field-bg-color);
+    background-color: var(--button-field-text-color);
+}
+
+/* button add */
+
+.button_add {
+    width           : 60px;
+    height          : 60px;
+    border-radius   : 50%;
+    background-color: var(--text-primary-color);
+    box-shadow      : 0px 10px 40px rgba(0, 0, 0, 0.1);
+    position        : relative;
+    align-self      : flex-end;
+    justify-self    : flex-end;
+}
+
+.button_add:hover {
+    background-color: var(--main-color);
+}
+
+.button_add:hover:before,
+.button_add:hover::after {
+    background-color: var(--text-primary-color);
+}
+
+.button_add:active {
+    background-color: var(--button-field-text-color);
+}
+
+.button_add::before,
+.button_add::after {
+    content         : '';
+    position        : absolute;
+    top             : calc(50% - 1px);
+    left            : calc(50% -11px);
+    background-color: var(--main-color);
+    width           : 22px;
+    height          : 2px;
+    border-radius   : 2px;
+}
+
+.button_add::after {
+    top      : calc(50% - 1px);
+    left     : calc(50% -11px);
+    transform: rotate(90deg);
+}
